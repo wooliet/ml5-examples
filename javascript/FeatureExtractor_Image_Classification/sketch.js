@@ -39,7 +39,7 @@ function modelLoaded() {
 // Extract the already learned features from MobileNet
 const featureExtractor = ml5.featureExtractor('MobileNet', modelLoaded);
 // Create a new classifier using those features
-const classifier = featureExtractor.asClassifier(video);
+const classifier = featureExtractor.classification(video);
 
 // Predict the current frame.
 function predict() {
